@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import Greeting from "./components/Greeting";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const languageGreetingsList = [
+  {
+    id: "bfdf40eb-eec9-4a66-a493-752fe689f0d0",
+    imageUrl:
+      "https://assets.ccbp.in/frontend/react-js/multilingual_greeting/english-greetings-img.png",
+    buttonText: "English",
+    imageAltText: "english",
+  },
+  {
+    id: "0ceda891-2a0c-49e2-8c62-68e78180bac6",
+    imageUrl:
+      "https://assets.ccbp.in/frontend/react-js/multilingual_greeting/tamil-greetings-img.png",
+    buttonText: "Tamil",
+    imageAltText: "tamil",
+  },
+  {
+    id: "89537778-7a46-4c58-988c-0adc931d087c",
+    imageUrl:
+      "https://assets.ccbp.in/frontend/react-js/multilingual_greeting/telugu-greetings-img.png",
+    buttonText: "Telugu",
+    imageAltText: "telugu",
+  },
+];
+
+// Replace your code here
+const App = () => (
+  <div>
+    <h1>Multilingual Greetings</h1>
+    <Greeting list={languageGreetingsList} />
+  </div>
+);
 
 export default App;
